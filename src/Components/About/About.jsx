@@ -13,8 +13,10 @@ function About() {
       <li className='mt-[2vh]' ><span className='font-bold text-xl mx-1'>Accurate Profile Search: </span><span>Simply input the GitHub user ID, and we'll do the rest. Our powerful search engine will fetch the profile details you're looking for in an instant.</span></li>
       <li className='mt-[2vh]' ><span className='font-bold text-xl mx-1'>Comprehensive Profile Information: </span><span>Gain in-depth insights with detailed profile data, including:</span>
       <ul>
+      <li className='mt-[2vh]' ><span className='font-bold text-xl mx-1'>Account Type: </span><span>Is it a Personal accounts, Organization accounts or Enterprise accounts. </span></li>
         <li className='mt-[2vh]' ><span className='font-bold text-xl mx-1'>Profile Creation Date:</span><span>Know when the account was created.</span></li>
         <li className='mt-[2vh]' ><span className='font-bold text-xl mx-1'>Last Updated Date:</span><span>See the most recent activity.</span></li>
+        <li className='mt-[2vh]' ><span className='font-bold text-xl mx-1'>Email Address:</span><span>Email address accociated with the account.</span></li>
         <li className='mt-[2vh]' ><span className='font-bold text-xl mx-1'>Followers and Following: </span><span>Track the user's influence and network.</span></li>
         <li className='mt-[2vh]' ><span className='font-bold text-xl mx-1'>Profile Picture:</span><span>Get a visual identity.</span></li>
         <li className='mt-[2vh]' ><span className='font-bold text-xl mx-1'>Location:</span><span>Discover where the user is based.</span></li>
@@ -24,7 +26,7 @@ function About() {
       </ul>
       </li>
     </ul>
-    <h2 className='font-bold text-2xl mt-10'>Why Choose Us?</h2>
+    <h2 className='font-bold text-2xl mt-10'>Why GitHub Profile Finder?</h2>
     <p>At GitHub Profile Finder, we are committed to providing a seamless and efficient experience. Our service is not just about finding profiles; it's about connecting people, enhancing collaboration, and building a community of developers who can easily find each other and share their work.</p>
     <p>We understand the value of accurate information and quick access in the fast-paced tech world. That's why we've built a platform that's intuitive, reliable, and packed with features to help you get the most out of GitHub.</p>
     </div>

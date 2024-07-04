@@ -15,7 +15,7 @@ function Navbar() {
     return (
         <>
             <nav className='sticky top-0 w-full p-2 bg-white/20 backdrop-blur-md shadow-md flex justify-between items-center z-1100'>
-                <h1 className='text-xl'><img src="GPF.png" className="h-12 rounded-3xl" alt="Flowbite Logo" /></h1>
+                <h1 className='text-xl'><img src="GitHubProfileFinder.png" className="h-12 rounded-3xl" alt="GitHubProfileFinder" /></h1>
             </nav>
 
             <div onClick={toggleOpen} className={`hamburger ${isOpen ? 'open' : ''}`} id="hamburger">

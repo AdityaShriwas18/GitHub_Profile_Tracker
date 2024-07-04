@@ -6,6 +6,8 @@ function Home() {
 
     let [inputValue, setInputValue] = useState('');
     let [username, setUsername] = useState('username')
+    let [type, setType] = useState('GitHub')
+    let [email, setEmail] = useState('email@example.com')
     let [profilepic, setProfilepic] = useState('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png')
     let [userID, setUserID] = useState('userID')
     let [followers, setFollowers] = useState(0)
@@ -39,21 +41,23 @@ function Home() {
                 }
                 data = await response.json();
                 console.log(data.name);
-                setUsername(data.name || 'Not Provided');
+                setUsername(data.name || 'Not available');
                 setProfilepic(data.avatar_url || 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png');
-                setUserID(data.login || 'Not Provided');
+                setUserID(data.login || 'Not available');
                 setFollowers(data.followers || 0);
                 setFollowing(data.following || 0);
-                setCreated_at(data.created_at || 'Not Provided');
-                setUpdated_at(data.updated_at || 'Not Provided');
-                setBio(data.bio || 'Not Provided');
-                setHtml_url(data.html_url || 'Not Provided');
-                setLocation(data.location || 'Not Provided');
-                setTwitter_username(data.twitter_username || 'Not Provided');
+                setCreated_at(data.created_at || 'Not available');
+                setUpdated_at(data.updated_at || 'Not available');
+                setBio(data.bio || 'Not available');
+                setHtml_url(data.html_url || 'Not available');
+                setLocation(data.location || 'Not available');
+                setTwitter_username(data.twitter_username || 'Not available');
                 setPublic_repos(data.public_repos || 0);
+                setEmail(data.email || 'Not available')
+                setType(data.type || 'Not available')
                 setError(null);
             } catch (error) {
-                console.error(error);
+                console.error(error.message);
                 setError('Inavlid Username or User Not exist!');
             } finally {
                 setLoading(false);
@@ -74,8 +78,14 @@ function Home() {
                             </svg>
                         </div>
                         <input type="search" value={inputValue} onChange={(e) => setInputValue(e.target.value)} id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search User Profile..." required />
-                        <button onClick={getuserdata}
-                            onKeyPress={(e) => { if (e.key === 'Enter') handleKeyPress(e) }} class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                        <button
+                            onClick={getuserdata}
+                            onKeyDown={(e) => { if (e.key === 'Enter') getuserdata() }}
+                            className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Search
+                        </button>
+
+
                     </div>
                 </div>
 
@@ -147,20 +157,8 @@ function Home() {
                                         <td className="px-6 py-4 text-white">{username}</td>
                                     </tr>
                                     <tr>
-                                        <td className="px-6 py-4 font-bold text-white">UserID</td>
-                                        <td className="px-6 py-4 text-white">{userID}</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="px-6 py-4 font-bold text-white">Bio</td>
-                                        <td className="px-6 py-4 text-white">{bio}</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="px-6 py-4 font-bold text-white">Public repositories</td>
-                                        <td className="px-6 py-4 text-white">{public_repos}</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="px-6 py-4 font-bold text-white">Profile</td>
-                                        <td className="px-6 py-4 text-white"><a href={html_url}>view profile</a></td>
+                                        <td className="px-6 py-4 font-bold text-white">Account type</td>
+                                        <td className="px-6 py-4 text-white">{type}</td>
                                     </tr>
                                     <tr>
                                         <td className="px-6 py-4 font-bold text-white">Created at</td>
@@ -169,6 +167,22 @@ function Home() {
                                     <tr>
                                         <td className="px-6 py-4 font-bold text-white">Updated at</td>
                                         <td className="px-6 py-4 text-white">{updated_at.split("T")[0]}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 font-bold text-white">Bio</td>
+                                        <td className="px-6 py-4 text-white">{bio}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 font-bold text-white">Email</td>
+                                        <td className="px-6 py-4 text-white">{email}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 font-bold text-white">Public repositories</td>
+                                        <td className="px-6 py-4 text-white">{public_repos}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 font-bold text-white">Profile</td>
+                                        <td className="px-6 py-4 text-white"><a href={html_url}>view profile</a></td>
                                     </tr>
                                     <tr>
                                         <td className="px-6 py-4 font-bold text-white">Followers</td>

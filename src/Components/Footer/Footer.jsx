@@ -8,7 +8,7 @@ function Footer() {
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <div className='flex gap-2'>
-                        <img src="GPF.png" className="h-10 rounded-3xl" alt="GitHub Profile Finder" />
+                        <img src="GitHubProfileFinder.png" className="h-10 rounded-3xl" alt="GitHub Profile Finder" />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">GitHub Profile Finder</span>
                     </div>
                 </div>

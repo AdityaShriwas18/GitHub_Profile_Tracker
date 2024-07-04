@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Loader from '../Loader/Loader';
 
 
@@ -16,19 +16,24 @@ function Repos({ inputValue }) {
       try {
         let reporesponse = await fetch(url);
         if (!reporesponse.ok) {
-          throw new Error('Repositories not found or request failed.');
+          throw new Error('Repositories not found or user request failed.');
         }
         const data = await reporesponse.json();
         setRepodata(data);
         setRepoError(null);
       } catch (error) {
         console.error(error);
-        setRepoError('Repositories not found or request failed.');
+        setRepoError('Repositories not found or user request failed.');
       } finally {
         setLoading(false);
       }
     }
   }
+
+  useEffect(() => {
+    setRepodata([])
+  }, [inputValue])
+
 
   return (
     <>
@@ -37,24 +42,24 @@ function Repos({ inputValue }) {
           Watch Repositories
         </button>
         {repoerror && <p className="text-red-500 text-center mt-4">{repoerror}</p>}
-        {loading ? <Loader /> : 
-        (<div className='flex flex-wrap justify-evenly'>
-          {
-            repodata.map((repo) => (
-              <a href={repo.html_url} key={repo.id} className="w-72 mx-1 my-1 bg-slate-900 border rounded-lg border-gray-700 p-5 shadow hover:bg-gray-700 delay-100 duration-200">
-                <div>
-                  <p className="flex gap-2 overflow-x-hidden">
-                    <span className='font-semibold'>{repo.full_name || "Not Set"}</span>
-                  </p>
-                  <p className="text-xs text-gray-500 mt-3 truncate ">
-                    {repo.description || "Description not provided"}<br />
-                    {repo.language || "Language not provided"}
-                  </p>
-                </div>
-              </a>
-            ))
-          }
-        </div>)}
+        {loading ? <Loader /> :
+          (<div className='flex flex-wrap justify-evenly'>
+            {
+              repodata.map((repo) => (
+                <a href={repo.html_url} key={repo.id} className="w-72 mx-1 my-1 bg-slate-900 border rounded-lg border-gray-700 p-5 shadow hover:bg-gray-700 delay-100 duration-200">
+                  <div>
+                    <p className="flex gap-2 overflow-x-hidden">
+                      <span className='font-semibold'>{repo.full_name || "Not Set"}</span>
+                    </p>
+                    <p className="text-xs text-gray-500 mt-3 truncate ">
+                      {repo.description || "Description not provided"}<br />
+                      {repo.language || "Language not provided"}
+                    </p>
+                  </div>
+                </a>
+              ))
+            }
+          </div>)}
       </div>
     </>
   );
