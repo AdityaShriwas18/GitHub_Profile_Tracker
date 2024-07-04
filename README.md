@@ -8,8 +8,6 @@ Welcome to GitHub Profile Finder, the ultimate solution for discovering GitHub p
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## About
 
@@ -20,6 +18,8 @@ GitHub Profile Finder is designed to help you locate any GitHub user by their us
 - **Accurate Profile Search**: Simply input the GitHub user ID, and It'll do the rest.
 - **Comprehensive Profile Information**: Gain insights with some profile data, including:
   - **Profile Creation Date**: Know when the account was created.
+  - **Account Type**: Is it a Personal accounts, Organization accounts or Enterprise accounts.
+  - **Email Address**: Email address accociated with the account.
   - **Last Updated Date**: See the most recent activity.
   - **Followers and Following**: Track the user's influence and network.
   - **Profile Picture**: Get a visual identity.
@@ -51,9 +51,10 @@ To get started with GitHub Profile Finder, follow these steps:
 
 To use GitHub Profile Finder:
 
-1. Open your web browser and navigate to `https://githubprofilefinderrr.netlify.app/`.
+1. Open your web browser and navigate to `https://githubprofilefinderrr.netlify.app/`
 2. Enter the GitHub user ID in the search bar.
 3. View the profile information that is displayed.
+4. To install simply add it to home screen.
 
 ## Contributing
 
