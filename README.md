@@ -23,6 +23,7 @@ GitHub Profile Finder is designed to help you locate any GitHub user by their us
   - **Last Updated Date**: See the most recent activity.
   - **Followers and Following**: Track the user's influence and network.
   - **Profile Picture**: Get a visual identity.
+  - **Blog**: Any website of blog by the user.
   - **Location**: Discover where the user is based.
   - **Bio**: Learn more about the user's professional background and interests.
   - **Username**: Confirm the identity of the user.
