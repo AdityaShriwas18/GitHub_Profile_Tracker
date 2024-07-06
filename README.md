@@ -1,6 +1,6 @@
-# GitHub Profile Finder
+# GitHub Profile Tracker
 
-Welcome to GitHub Profile Finder, the ultimate solution for discovering GitHub profiles that are hard to find!
+Welcome to GitHub Profile Tracker, the ultimate solution for discovering GitHub profiles that are hard to find!
 
 ## Table of Contents
 - [About](#about)
@@ -11,7 +11,7 @@ Welcome to GitHub Profile Finder, the ultimate solution for discovering GitHub p
 
 ## About
 
-GitHub Profile Finder is designed to help you locate any GitHub user by their user ID, ensuring you never miss out on connecting with the developer you need. Whether you're a recruiter searching for top talent, a fellow developer looking to collaborate, or just someone interested in exploring GitHub's rich ecosystem.
+GitHub Profile Tracker is designed to help you locate any GitHub user by their user ID, ensuring you never miss out on connecting with the developer you need. Whether you're a recruiter searching for top talent, a fellow developer looking to collaborate, or just someone interested in exploring GitHub's rich ecosystem.
 
 ## Features
 
@@ -23,6 +23,7 @@ GitHub Profile Finder is designed to help you locate any GitHub user by their us
   - **Last Updated Date**: See the most recent activity.
   - **Followers and Following**: Track the user's influence and network.
   - **Profile Picture**: Get a visual identity.
+  - **Blog**: Any website of blog by the user.
   - **Location**: Discover where the user is based.
   - **Bio**: Learn more about the user's professional background and interests.
   - **Username**: Confirm the identity of the user.
@@ -30,7 +31,7 @@ GitHub Profile Finder is designed to help you locate any GitHub user by their us
 
 ## Installation
 
-To get started with GitHub Profile Finder, follow these steps:
+To get started with GitHub Profile Tracker, follow these steps:
 
 1. Clone the repository:
     ```sh
@@ -49,7 +50,7 @@ To get started with GitHub Profile Finder, follow these steps:
 
 ## Usage
 
-To use GitHub Profile Finder:
+To use GitHub Profile Tracker:
 
 1. Open your web browser and navigate to `https://githubprofilefinderrr.netlify.app/`
 2. Enter the GitHub user ID in the search bar.
@@ -58,7 +59,7 @@ To use GitHub Profile Finder:
 
 ## Contributing
 
-I welcome contributions to make GitHub Profile Finder better! To contribute, follow these steps:
+I welcome contributions to make GitHub Profile Tracker better! To contribute, follow these steps:
 
 1. Fork the repository.
 2. Create a new branch: `git checkout -b feature/your-feature-name`.
