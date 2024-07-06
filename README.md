@@ -19,11 +19,11 @@ GitHub Profile Tracker is designed to help you locate any GitHub user by their u
 - **Comprehensive Profile Information**: Gain insights with some profile data, including:
   - **Profile Creation Date**: Know when the account was created.
   - **Account Type**: Is it a Personal accounts, Organization accounts or Enterprise accounts.
-  - **Email Address**: Email address accociated with the account.
+  - **Email Address**: Email address associated with the account.
   - **Last Updated Date**: See the most recent activity.
   - **Followers and Following**: Track the user's influence and network.
   - **Profile Picture**: Get a visual identity.
-  - **Blog**: Any website of blog by the user.
+  - **Blog**: Any website or blog by the user.
   - **Location**: Discover where the user is based.
   - **Bio**: Learn more about the user's professional background and interests.
   - **Username**: Confirm the identity of the user.
@@ -35,7 +35,7 @@ To get started with GitHub Profile Tracker, follow these steps:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/AdityaShriwas18/GitHub_Profile_Finder
+    git clone https://github.com/AdityaShriwas18/GitHub_Profile_Tracker
     ```
 
 2. Install dependencies:
@@ -52,10 +52,10 @@ To get started with GitHub Profile Tracker, follow these steps:
 
 To use GitHub Profile Tracker:
 
-1. Open your web browser and navigate to `https://githubprofilefinderrr.netlify.app/`
+1. Open your web browser and navigate to `https://githubprofiletracker.netlify.app/`
 2. Enter the GitHub user ID in the search bar.
 3. View the profile information that is displayed.
-4. To install simply add it to home screen.
+4. To install, simply add it to your home screen.
 
 ## Contributing
 
@@ -66,7 +66,3 @@ I welcome contributions to make GitHub Profile Tracker better! To contribute, fo
 3. Make your changes and commit them: `git commit -m 'Add some feature'`.
 4. Push to the branch: `git push origin feature/your-feature-name`.
 5. Submit a pull request.
-
-
-
-
