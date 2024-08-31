@@ -5,11 +5,11 @@ function About() {
     <>
       <div className="aboutsection w-full px-8 mt-[5vh] mb-[15vh]">
         <h1 className='text-center font-bold text-4xl mb-4'>About GitHub Profile Tracker</h1>
-        <p>Welcome to GitHub Profile Tracker, your go-to tool for obtaining quick and comprehensive details about GitHub profiles! In the vast world of developers and repositories, gaining insights into a specific GitHub user’s profile can sometimes be a challenging task.</p>
+        <p>Welcome to GitHub Profile Tracker, your go-to tool for obtaining quick and comprehensive details about GitHub profiles! And also it is sometimes difficult to land on a developer's profile even if you know the username, you can't find the profile. That's where this tool can help you to also find the user's profile. </p>
 
-        <p>This platform is designed to provide you with key information about any GitHub user by their user ID, ensuring you get the essential details you need without hassle. Whether you're a recruiter looking for quick stats, a fellow developer interested in collaboration.</p>
+        <p>This platform is designed to provide you with key information about any GitHub user by their user ID, ensuring you get the essential details you need without hassle.</p>
 
-        <h2 className='font-bold text-2xl mt-10'>WHAT WE OFFER</h2>
+        <h2 className='font-bold text-2xl mt-10'>WHAT THIS TOOL OFFER</h2>
         <ul>
           <li className='mt-[2vh]'>
             <span className='font-bold text-xl mx-1'>Quick Profile Overview: </span>
@@ -22,6 +22,10 @@ function About() {
               <li className='mt-[2vh]'>
                 <span className='font-bold text-xl mx-1'>Username: </span>
                 <span>Confirm the identity of the user.</span>
+              </li>
+              <li className='mt-[2vh]'>
+                <span className='font-bold text-xl mx-1'>Account Type: </span>
+                <span>Is it a Personal accounts, Organization accounts or Enterprise accounts.</span>
               </li>
               <li className='mt-[2vh]'>
                 <span className='font-bold text-xl mx-1'>Profile Picture: </span>
@@ -48,8 +52,8 @@ function About() {
                 <span>Know when the account was created.</span>
               </li>
               <li className='mt-[2vh]'>
-                <span className='font-bold text-xl mx-1'>Last Updated Date: </span>
-                <span>See the most recent activity.</span>
+                <span className='font-bold text-xl mx-1'>Last Updatedation Date: </span>
+                <span>See when the profile was last updated.</span>
               </li>
             </ul>
           </li>

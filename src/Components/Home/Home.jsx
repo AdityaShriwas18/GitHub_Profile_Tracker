@@ -82,7 +82,7 @@ function Home() {
                         <input type="search" value={inputValue} onKeyUp={(e) => { if (e.key === 'Enter') getuserdata() }} onChange={(e) => setInputValue(e.target.value)} id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search User Profile..." required />
                         <button
                             onClick={getuserdata}
-                            
+
                             className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             Search
                         </button>
@@ -94,12 +94,15 @@ function Home() {
                 {loading ? <Loader /> : (<main className='flex justify-around flex-wrap gap-4' >
                     <div className="profilecard overflow-hidden">
                         <div class="text-gray-300 rounded-lg text-sm w-[350px] bg-[#161b22] border border-[#3f3f46]">
-                            <div class="w-full flex flex-row space-x-3 p-4">
+                            <div class="w-full flex flex-row space-x-3 p-4 relative">
+
                                 <img
-                                    class="rounded-2xl border-zinc-700 w-20 h-20"
+                                    className="rounded-2xl border-zinc-700 w-20 h-20"
                                     alt="avatar"
                                     src={profilepic}
                                 />
+                                <div className="rounded-2xl absolute border-zinc-700  w-20 h-20 top-4 left-1"></div>
+
                                 <div class="w-full text-gray-500">
                                     <p class="w-[200px] text-lg space-x-1 inline-block overflow-hidden whitespace-nowrap text-ellipsis">
                                         <span class="text-gray-100">{username}</span><span class="font-extralight"></span>
@@ -130,15 +133,15 @@ function Home() {
                                     </svg>
                                     <p class="text-gray-100">{location}</p>
                                 </div>
-                                
+
                                 <div class="flex items-center space-x-1 overflow-hidden">
-                                <svg aria-hidden="true" fill='white' height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-link">
-                                    <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path>
-                                </svg>
+                                    <svg aria-hidden="true" fill='white' height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-link">
+                                        <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path>
+                                    </svg>
                                     <a href={blog} class="text-gray-100">{blog}</a>
                                 </div>
 
-                                
+
 
                                 <div v-if="infos.twitter_username" class="flex items-center space-x-1">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273.5 222.3" width="16" height="16">

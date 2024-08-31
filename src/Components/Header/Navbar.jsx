@@ -14,7 +14,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className='sticky top-0 w-full p-2 bg-white/20 backdrop-blur-md shadow-md flex justify-between items-center z-1100'>
+            <nav className='sticky top-0 w-full p-2 bg-white/20 backdrop-blur-md shadow-md flex justify-between items-center z-50'>
                 <h1 className='text-xl'><img src="GitHubProfileTracker.png" className="h-12 rounded-xl" alt="GitHubProfileFinder" /></h1>
             </nav>
 
